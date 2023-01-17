@@ -3,7 +3,7 @@
 
 package eventstreamapi
 
-import "github.com/aws/aws-sdk-go/aws/request"
+import "github.com/rocketman317/aws-sdk-go/aws/request"
 
 // ApplyHTTPTransportFixes is a no-op for Go 1.18 and above.
 func ApplyHTTPTransportFixes(r *request.Request) {

@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws/aws-sdk-go/private/protocol/eventstream"
-	"github.com/aws/aws-sdk-go/private/protocol/eventstream/eventstreamtest"
+	"github.com/rocketman317/aws-sdk-go/private/protocol/eventstream"
+	"github.com/rocketman317/aws-sdk-go/private/protocol/eventstream/eventstreamtest"
 )
 
 func TestSignEncoder(t *testing.T) {

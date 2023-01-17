@@ -3,7 +3,7 @@
 // Provides request signing for request that need to be signed with
 // AWS V4 Signatures.
 //
-// Standalone Signer
+// # Standalone Signer
 //
 // Generally using the signer outside of the SDK should not require any additional
 // logic when using Go v1.5 or higher. The signer does this by taking advantage
@@ -14,10 +14,10 @@
 // The signer will first check the URL.Opaque field, and use its value if set.
 // The signer does require the URL.Opaque field to be set in the form of:
 //
-//     "//<hostname>/<path>"
+//	"//<hostname>/<path>"
 //
-//     // e.g.
-//     "//example.com/some/path"
+//	// e.g.
+//	"//example.com/some/path"
 //
 // The leading "//" and hostname are required or the URL.Opaque escaping will
 // not work correctly.
@@ -68,11 +68,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/internal/sdkio"
-	"github.com/aws/aws-sdk-go/private/protocol/rest"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/credentials"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/internal/sdkio"
+	"github.com/rocketman317/aws-sdk-go/private/protocol/rest"
 )
 
 const (

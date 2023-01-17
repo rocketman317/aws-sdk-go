@@ -8,9 +8,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/service/dynamodb"
+	"github.com/rocketman317/aws-sdk-go/service/dynamodb/dynamodbiface"
 )
 
 // A fakeDynamoDB instance. During testing, instatiate ItemGetter, then simply

@@ -9,9 +9,9 @@
 package route53recoverycontrolconfigiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/route53recoverycontrolconfig"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/route53recoverycontrolconfig"
 )
 
 // Route53RecoveryControlConfigAPI provides an interface to enable mocking the

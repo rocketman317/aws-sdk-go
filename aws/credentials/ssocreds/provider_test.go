@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/sso"
-	"github.com/aws/aws-sdk-go/service/sso/ssoiface"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/credentials"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/sso"
+	"github.com/rocketman317/aws-sdk-go/service/sso/ssoiface"
 )
 
 type mockClient struct {

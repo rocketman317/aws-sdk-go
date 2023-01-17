@@ -7,13 +7,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/ec2metadata"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/internal/sdkuri"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/awserr"
+	"github.com/rocketman317/aws-sdk-go/aws/client"
+	"github.com/rocketman317/aws-sdk-go/aws/credentials"
+	"github.com/rocketman317/aws-sdk-go/aws/ec2metadata"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/internal/sdkuri"
 )
 
 // ProviderName provides a name of EC2Role provider
@@ -25,17 +25,17 @@ const ProviderName = "EC2RoleProvider"
 // Example how to configure the EC2RoleProvider with custom http Client, Endpoint
 // or ExpiryWindow
 //
-//     p := &ec2rolecreds.EC2RoleProvider{
-//         // Pass in a custom timeout to be used when requesting
-//         // IAM EC2 Role credentials.
-//         Client: ec2metadata.New(sess, aws.Config{
-//             HTTPClient: &http.Client{Timeout: 10 * time.Second},
-//         }),
+//	p := &ec2rolecreds.EC2RoleProvider{
+//	    // Pass in a custom timeout to be used when requesting
+//	    // IAM EC2 Role credentials.
+//	    Client: ec2metadata.New(sess, aws.Config{
+//	        HTTPClient: &http.Client{Timeout: 10 * time.Second},
+//	    }),
 //
-//         // Do not use early expiry of credentials. If a non zero value is
-//         // specified the credentials will be expired early
-//         ExpiryWindow: 0,
-//     }
+//	    // Do not use early expiry of credentials. If a non zero value is
+//	    // specified the credentials will be expired early
+//	    ExpiryWindow: 0,
+//	}
 type EC2RoleProvider struct {
 	credentials.Expiry
 

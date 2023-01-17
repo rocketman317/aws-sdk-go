@@ -10,16 +10,18 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/aws/session"
+	"github.com/rocketman317/aws-sdk-go/service/s3/s3manager"
 )
 
 // Usage:
-//   go run -tags example  <bucket> <key> <file to upload>
+//
+//	go run -tags example  <bucket> <key> <file to upload>
 //
 // Example:
-//   AWS_REGION=us-west-2 AWS_PROFILE=default go run . "mybucket" "10MB.file" ./10MB.file
+//
+//	AWS_REGION=us-west-2 AWS_PROFILE=default go run . "mybucket" "10MB.file" ./10MB.file
 func main() {
 	sess, err := session.NewSession()
 	if err != nil {

@@ -7,15 +7,16 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/session"
+	"github.com/rocketman317/aws-sdk-go/service/s3"
 )
 
 // Put an ACL on an S3 object
 //
 // Usage:
 // putBucketAcl <params>
+//
 //	-region <region> // required
 //	-bucket <bucket> // required
 //	-key <key> // required

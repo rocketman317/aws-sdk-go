@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/session"
+	"github.com/rocketman317/aws-sdk-go/service/s3/s3manager"
 )
 
 // SyncFolderIterator is used to upload a given folder
@@ -94,6 +94,7 @@ func (iter *SyncFolderIterator) UploadObject() s3manager.BatchUploadObject {
 //
 // Usage:
 // sync <params>
+//
 //	-region <region> // required
 //	-bucket <bucket> // required
 //	-path  <path> // required

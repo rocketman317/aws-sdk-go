@@ -3,8 +3,8 @@ package finspace
 import (
 	"strings"
 
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/aws/client"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
 )
 
 func init() {

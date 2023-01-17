@@ -4,7 +4,7 @@
 // Command gen-endpoints parses a JSON description of the AWS endpoint
 // discovery logic and generates a Go file which returns an endpoint.
 //
-//     aws-gen-goendpoints apis/_endpoints.json aws/endpoints_map.go
+//	aws-gen-goendpoints apis/_endpoints.json aws/endpoints_map.go
 package main
 
 import (
@@ -12,14 +12,15 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aws/aws-sdk-go/aws/endpoints"
+	"github.com/rocketman317/aws-sdk-go/aws/endpoints"
 )
 
 // Generates the endpoints from json description
 //
 // Args:
-//  -model The definition file to use
-//  -out The output file to generate
+//
+//	-model The definition file to use
+//	-out The output file to generate
 func main() {
 	var modelName, outName string
 	flag.StringVar(&modelName, "model", "", "Endpoints definition model")

@@ -5,8 +5,8 @@ package redshift
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
 )
 
 // WaitUntilClusterAvailable uses the Amazon Redshift API operation

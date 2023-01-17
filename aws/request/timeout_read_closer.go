@@ -4,7 +4,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws/awserr"
+	"github.com/rocketman317/aws-sdk-go/aws/awserr"
 )
 
 var timeoutErr = awserr.New(
@@ -71,7 +71,7 @@ func adaptToResponseTimeoutError(req *Request) {
 // This will allow for per read timeouts. If a timeout occurred, we will return the
 // ErrCodeResponseTimeout.
 //
-//     svc.PutObjectWithContext(ctx, params, request.WithTimeoutReadCloser(30 * time.Second)
+//	svc.PutObjectWithContext(ctx, params, request.WithTimeoutReadCloser(30 * time.Second)
 func WithResponseReadTimeout(duration time.Duration) Option {
 	return func(r *Request) {
 

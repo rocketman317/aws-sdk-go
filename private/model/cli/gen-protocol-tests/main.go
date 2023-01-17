@@ -17,8 +17,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/aws/aws-sdk-go/private/model/api"
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/rocketman317/aws-sdk-go/private/model/api"
+	"github.com/rocketman317/aws-sdk-go/private/util"
 )
 
 // TestSuiteTypeInput input test

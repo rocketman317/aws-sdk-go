@@ -4,7 +4,7 @@
 package credentials
 
 import (
-	"github.com/aws/aws-sdk-go/internal/context"
+	"github.com/rocketman317/aws-sdk-go/internal/context"
 )
 
 // backgroundContext returns a context that will never be canceled, has no

@@ -9,7 +9,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws"
 )
 
 type implicitPayload struct {

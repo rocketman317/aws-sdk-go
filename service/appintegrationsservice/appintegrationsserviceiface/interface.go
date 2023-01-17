@@ -9,9 +9,9 @@
 package appintegrationsserviceiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/appintegrationsservice"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/appintegrationsservice"
 )
 
 // AppIntegrationsServiceAPI provides an interface to enable mocking the

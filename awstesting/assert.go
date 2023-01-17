@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/internal/smithytesting"
+	"github.com/rocketman317/aws-sdk-go/internal/smithytesting"
 )
 
 // Match is a testing helper to test for testing error by comparing expected
@@ -154,7 +154,7 @@ func objectsAreEqual(expected, actual interface{}) bool {
 
 // Equal asserts that two objects are equal.
 //
-//    assert.Equal(t, 123, 123, "123 and 123 should be equal")
+//	assert.Equal(t, 123, 123, "123 and 123 should be equal")
 //
 // Returns whether the assertion was successful (true) or not (false).
 //

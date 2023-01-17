@@ -6,13 +6,14 @@
 package unitTest
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
-	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/service/dynamodb"
+	"github.com/rocketman317/aws-sdk-go/service/dynamodb/dynamodbattribute"
+	"github.com/rocketman317/aws-sdk-go/service/dynamodb/dynamodbiface"
 )
 
 // ItemGetter can be assigned a DynamoDB connector like:
+//
 //	svc := dynamodb.DynamoDB(sess)
 //	getter.DynamoDB = dynamodbiface.DynamoDBAPI(svc)
 type ItemGetter struct {

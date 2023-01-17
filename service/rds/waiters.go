@@ -5,8 +5,8 @@ package rds
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
 )
 
 // WaitUntilDBClusterAvailable uses the Amazon RDS API operation

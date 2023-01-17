@@ -3,8 +3,8 @@ package eventstreamapi
 import (
 	"fmt"
 
-	"github.com/aws/aws-sdk-go/private/protocol"
-	"github.com/aws/aws-sdk-go/private/protocol/eventstream"
+	"github.com/rocketman317/aws-sdk-go/private/protocol"
+	"github.com/rocketman317/aws-sdk-go/private/protocol/eventstream"
 )
 
 // Unmarshaler provides the interface for unmarshaling a EventStream

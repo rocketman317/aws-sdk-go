@@ -17,16 +17,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/credentials/stscreds"
-	"github.com/aws/aws-sdk-go/aws/defaults"
-	"github.com/aws/aws-sdk-go/aws/endpoints"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/internal/sdktesting"
-	"github.com/aws/aws-sdk-go/internal/shareddefaults"
-	"github.com/aws/aws-sdk-go/private/protocol"
-	"github.com/aws/aws-sdk-go/service/sts"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/credentials"
+	"github.com/rocketman317/aws-sdk-go/aws/credentials/stscreds"
+	"github.com/rocketman317/aws-sdk-go/aws/defaults"
+	"github.com/rocketman317/aws-sdk-go/aws/endpoints"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/internal/sdktesting"
+	"github.com/rocketman317/aws-sdk-go/internal/shareddefaults"
+	"github.com/rocketman317/aws-sdk-go/private/protocol"
+	"github.com/rocketman317/aws-sdk-go/service/sts"
 )
 
 func newEc2MetadataServer(key, secret string, closeAfterGetCreds bool) *httptest.Server {

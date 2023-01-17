@@ -6,11 +6,11 @@ package s3integ
 import (
 	"fmt"
 
-	"github.com/aws/aws-sdk-go/awstesting/integration"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/service/s3/s3iface"
-	"github.com/aws/aws-sdk-go/service/s3control"
-	"github.com/aws/aws-sdk-go/service/s3control/s3controliface"
+	"github.com/rocketman317/aws-sdk-go/awstesting/integration"
+	"github.com/rocketman317/aws-sdk-go/service/s3"
+	"github.com/rocketman317/aws-sdk-go/service/s3/s3iface"
+	"github.com/rocketman317/aws-sdk-go/service/s3control"
+	"github.com/rocketman317/aws-sdk-go/service/s3control/s3controliface"
 )
 
 // BucketPrefix is the root prefix of integration test buckets.

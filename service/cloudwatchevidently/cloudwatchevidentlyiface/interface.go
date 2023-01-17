@@ -9,9 +9,9 @@
 package cloudwatchevidentlyiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/cloudwatchevidently"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/cloudwatchevidently"
 )
 
 // CloudWatchEvidentlyAPI provides an interface to enable mocking the

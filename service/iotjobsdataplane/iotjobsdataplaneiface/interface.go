@@ -9,9 +9,9 @@
 package iotjobsdataplaneiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/iotjobsdataplane"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/iotjobsdataplane"
 )
 
 // IoTJobsDataPlaneAPI provides an interface to enable mocking the

@@ -5,14 +5,13 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/internal/sdkrand"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/internal/sdkrand"
 )
 
 // DefaultRetryer implements basic retry logic using exponential backoff for
 // most services. If you want to implement custom retry logic, you can implement the
 // request.Retryer interface.
-//
 type DefaultRetryer struct {
 	// Num max Retries is the number of max retries that will be performed.
 	// By default, this is zero.

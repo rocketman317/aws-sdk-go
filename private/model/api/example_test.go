@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/rocketman317/aws-sdk-go/private/util"
 )
 
 func buildAPI() *API {

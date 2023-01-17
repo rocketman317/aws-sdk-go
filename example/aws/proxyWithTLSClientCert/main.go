@@ -14,9 +14,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/session"
+	"github.com/rocketman317/aws-sdk-go/service/s3"
 )
 
 // Example of creating an HTTP Client configured with a client TLS
@@ -26,7 +26,8 @@ import (
 // Requires a cert and key flags, and optionally takes a CA file.
 //
 // To run:
-//   go run -cert <certfile> -key <keyfile> [-ca <cafile>]
+//
+//	go run -cert <certfile> -key <keyfile> [-ca <cafile>]
 //
 // You can generate self signed cert and key pem files
 // go run $(go env GOROOT)/src/crypto/tls/generate_cert.go -host <hostname>

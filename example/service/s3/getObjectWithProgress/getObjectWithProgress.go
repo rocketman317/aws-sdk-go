@@ -12,19 +12,20 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/session"
+	"github.com/rocketman317/aws-sdk-go/service/s3"
+	"github.com/rocketman317/aws-sdk-go/service/s3/s3manager"
 )
 
 // progressWriter tracks the download progress of a file from S3 to a file
 // as the writeAt method is called, the byte size is added to the written total,
 // and then a log is printed of the written percentage from the total size
 // it looks like this on the command line:
-//  2019/02/22 12:59:15 File size:35943530 downloaded:16360 percentage:0%
-//  2019/02/22 12:59:15 File size:35943530 downloaded:16988 percentage:0%
-//  2019/02/22 12:59:15 File size:35943530 downloaded:33348 percentage:0%
+//
+//	2019/02/22 12:59:15 File size:35943530 downloaded:16360 percentage:0%
+//	2019/02/22 12:59:15 File size:35943530 downloaded:16988 percentage:0%
+//	2019/02/22 12:59:15 File size:35943530 downloaded:33348 percentage:0%
 type progressWriter struct {
 	written int64
 	writer  io.WriterAt

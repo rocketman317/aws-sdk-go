@@ -9,9 +9,9 @@
 package timestreamqueryiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/timestreamquery"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/timestreamquery"
 )
 
 // TimestreamQueryAPI provides an interface to enable mocking the

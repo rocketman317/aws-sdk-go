@@ -9,9 +9,9 @@
 package globalacceleratoriface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/globalaccelerator"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/globalaccelerator"
 )
 
 // GlobalAcceleratorAPI provides an interface to enable mocking the

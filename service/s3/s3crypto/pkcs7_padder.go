@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"crypto/subtle"
 
-	"github.com/aws/aws-sdk-go/aws/awserr"
+	"github.com/rocketman317/aws-sdk-go/aws/awserr"
 )
 
 const (

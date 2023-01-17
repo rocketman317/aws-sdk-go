@@ -9,12 +9,12 @@ import (
 	"os"
 	"plugin"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials/plugincreds"
-	"github.com/aws/aws-sdk-go/aws/endpoints"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/credentials/plugincreds"
+	"github.com/rocketman317/aws-sdk-go/aws/endpoints"
+	"github.com/rocketman317/aws-sdk-go/aws/session"
+	"github.com/rocketman317/aws-sdk-go/service/s3"
+	"github.com/rocketman317/aws-sdk-go/service/s3/s3manager"
 )
 
 // Example application which loads a Go Plugin file, and uses the credential
@@ -25,10 +25,12 @@ import (
 // environment variable is not defined.
 //
 // Build:
-//   go build -tags example -o myApp main.go
+//
+//	go build -tags example -o myApp main.go
 //
 // Usage:
-//   ./myApp <compiled plugin> <bucket> <object key>
+//
+//	./myApp <compiled plugin> <bucket> <object key>
 func main() {
 	if len(os.Args) < 4 {
 		exitErrorf("Usage: myApp <compiled plugin>, <bucket> <object key>")

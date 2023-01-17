@@ -5,7 +5,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/aws/aws-sdk-go/internal/sdkio"
+	"github.com/rocketman317/aws-sdk-go/internal/sdkio"
 )
 
 // WriterReadFrom defines an interface implementing io.Writer and io.ReaderFrom

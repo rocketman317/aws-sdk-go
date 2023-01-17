@@ -4,14 +4,14 @@
 // Command aws-gen-gocli parses a JSON description of an AWS API and generates a
 // Go file containing a client for the API.
 //
-//     aws-gen-gocli apis/s3/2006-03-03/api-2.json
+//	aws-gen-gocli apis/s3/2006-03-03/api-2.json
 package main
 
 import (
 	"flag"
 	"fmt"
-	"github.com/aws/aws-sdk-go/private/model/api"
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/rocketman317/aws-sdk-go/private/model/api"
+	"github.com/rocketman317/aws-sdk-go/private/util"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -43,7 +43,8 @@ Flags:`)
 // -path alternative service path to write generated files to for each service.
 //
 // Env:
-//  SERVICES comma separated list of services to generate.
+//
+//	SERVICES comma separated list of services to generate.
 func main() {
 	var svcPath, svcImportPath string
 	flag.StringVar(&svcPath, "path", "service",

@@ -9,9 +9,9 @@
 package chimesdkmediapipelinesiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/chimesdkmediapipelines"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/chimesdkmediapipelines"
 )
 
 // ChimeSDKMediaPipelinesAPI provides an interface to enable mocking the

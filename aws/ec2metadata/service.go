@@ -21,12 +21,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/corehandlers"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/awserr"
+	"github.com/rocketman317/aws-sdk-go/aws/client"
+	"github.com/rocketman317/aws-sdk-go/aws/client/metadata"
+	"github.com/rocketman317/aws-sdk-go/aws/corehandlers"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
 )
 
 const (
@@ -57,13 +57,13 @@ type EC2Metadata struct {
 // New creates a new instance of the EC2Metadata client with a session.
 // This client is safe to use across multiple goroutines.
 //
-//
 // Example:
-//     // Create a EC2Metadata client from just a session.
-//     svc := ec2metadata.New(mySession)
 //
-//     // Create a EC2Metadata client with additional configuration
-//     svc := ec2metadata.New(mySession, aws.NewConfig().WithLogLevel(aws.LogDebugHTTPBody))
+//	// Create a EC2Metadata client from just a session.
+//	svc := ec2metadata.New(mySession)
+//
+//	// Create a EC2Metadata client with additional configuration
+//	svc := ec2metadata.New(mySession, aws.NewConfig().WithLogLevel(aws.LogDebugHTTPBody))
 func New(p client.ConfigProvider, cfgs ...*aws.Config) *EC2Metadata {
 	c := p.ClientConfig(ServiceName, cfgs...)
 	return NewClient(*c.Config, c.Handlers, c.Endpoint, c.SigningRegion)

@@ -3,7 +3,7 @@
 package migrationhubstrategyrecommendations
 
 import (
-	"github.com/aws/aws-sdk-go/private/protocol"
+	"github.com/rocketman317/aws-sdk-go/private/protocol"
 )
 
 const (

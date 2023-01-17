@@ -9,9 +9,9 @@
 package licensemanagerlinuxsubscriptionsiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/licensemanagerlinuxsubscriptions"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/service/licensemanagerlinuxsubscriptions"
 )
 
 // LicenseManagerLinuxSubscriptionsAPI provides an interface to enable mocking the

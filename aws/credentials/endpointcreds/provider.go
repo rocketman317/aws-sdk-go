@@ -7,39 +7,42 @@
 //
 // Static credentials will never expire once they have been retrieved. The format
 // of the static credentials response:
-//    {
-//        "AccessKeyId" : "MUA...",
-//        "SecretAccessKey" : "/7PC5om....",
-//    }
+//
+//	{
+//	    "AccessKeyId" : "MUA...",
+//	    "SecretAccessKey" : "/7PC5om....",
+//	}
 //
 // Refreshable credentials will expire within the "ExpiryWindow" of the Expiration
 // value in the response. The format of the refreshable credentials response:
-//    {
-//        "AccessKeyId" : "MUA...",
-//        "SecretAccessKey" : "/7PC5om....",
-//        "Token" : "AQoDY....=",
-//        "Expiration" : "2016-02-25T06:03:31Z"
-//    }
+//
+//	{
+//	    "AccessKeyId" : "MUA...",
+//	    "SecretAccessKey" : "/7PC5om....",
+//	    "Token" : "AQoDY....=",
+//	    "Expiration" : "2016-02-25T06:03:31Z"
+//	}
 //
 // Errors should be returned in the following format and only returned with 400
 // or 500 HTTP status codes.
-//    {
-//        "code": "ErrorCode",
-//        "message": "Helpful error message."
-//    }
+//
+//	{
+//	    "code": "ErrorCode",
+//	    "message": "Helpful error message."
+//	}
 package endpointcreds
 
 import (
 	"encoding/json"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/protocol/json/jsonutil"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/awserr"
+	"github.com/rocketman317/aws-sdk-go/aws/client"
+	"github.com/rocketman317/aws-sdk-go/aws/client/metadata"
+	"github.com/rocketman317/aws-sdk-go/aws/credentials"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/private/protocol/json/jsonutil"
 )
 
 // ProviderName is the name of the credentials provider.

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aws/aws-sdk-go/aws/endpoints"
+	"github.com/rocketman317/aws-sdk-go/aws/endpoints"
 )
 
 // Demostrates how the SDK's endpoints can be enumerated over to discover
@@ -16,22 +16,25 @@ import (
 // metadata.
 //
 // Usage:
-//  -p=id partition id, e.g: aws
-//  -r=id region id, e.g: us-west-2
-//  -s=id service id, e.g: s3
 //
-//  -partitions Lists all partitions.
-//  -regions Lists all regions in a partition. Requires partition ID.
-//           If service ID is also provided will show endpoints for a service.
-//  -services Lists all services in a partition. Requires partition ID.
-//            If region ID is also provided, will show services available in that region.
+//	-p=id partition id, e.g: aws
+//	-r=id region id, e.g: us-west-2
+//	-s=id service id, e.g: s3
+//
+//	-partitions Lists all partitions.
+//	-regions Lists all regions in a partition. Requires partition ID.
+//	         If service ID is also provided will show endpoints for a service.
+//	-services Lists all services in a partition. Requires partition ID.
+//	          If region ID is also provided, will show services available in that region.
 //
 // Example:
-//   go run enumEndpoints.go -p aws -services -r us-west-2
+//
+//	go run enumEndpoints.go -p aws -services -r us-west-2
 //
 // Output:
-//   Services with endpoint us-west-2 in aws:
-//   ...
+//
+//	Services with endpoint us-west-2 in aws:
+//	...
 func main() {
 	var partitionID, regionID, serviceID string
 	flag.StringVar(&partitionID, "p", "", "Partition ID")

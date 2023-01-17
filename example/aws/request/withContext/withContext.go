@@ -10,11 +10,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/rocketman317/aws-sdk-go/aws"
+	"github.com/rocketman317/aws-sdk-go/aws/awserr"
+	"github.com/rocketman317/aws-sdk-go/aws/request"
+	"github.com/rocketman317/aws-sdk-go/aws/session"
+	"github.com/rocketman317/aws-sdk-go/service/s3"
 )
 
 // Uploads a file to S3 given a bucket and object key. Also takes a duration
@@ -25,8 +25,9 @@ import (
 // Will default to shared config file, but can load from environment if provided.
 //
 // Usage:
-//   # Upload myfile.txt to myBucket/myKey. Must complete within 10 minutes or will fail
-//   go run withContext.go -b mybucket -k myKey -d 10m < myfile.txt
+//
+//	# Upload myfile.txt to myBucket/myKey. Must complete within 10 minutes or will fail
+//	go run withContext.go -b mybucket -k myKey -d 10m < myfile.txt
 func main() {
 	var bucket, key string
 	var timeout time.Duration
