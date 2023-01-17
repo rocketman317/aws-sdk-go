@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"hash"
 	"io"
+	"sync"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
@@ -24,6 +25,17 @@ const (
 	appendMD5TxEncoding = "append-md5"
 )
 
+var lock sync.Mutex
+var hasherFactory HasherFactory = &defaultHasherFactory{}
+
+// SetHasherFactory sets the HasherFactory to use for computing body hashes.
+func SetHasherFactory(f HasherFactory) {
+	lock.Lock()
+	defer lock.Unlock()
+
+	hasherFactory = f
+}
+
 // computeBodyHashes will add Content MD5 and Content Sha256 hashes to the
 // request. If the body is not seekable or S3DisableContentMD5Validation set
 // this handler will be ignored.
@@ -38,18 +50,20 @@ func computeBodyHashes(r *request.Request) {
 		return
 	}
 
-	var md5Hash, sha256Hash hash.Hash
+	var md5Hash, sha256Hash Hasher
 	hashers := make([]io.Writer, 0, 2)
 
 	// Determine upfront which hashes can be set without overriding user
 	// provide header data.
 	if v := r.HTTPRequest.Header.Get(contentMD5Header); len(v) == 0 {
-		md5Hash = md5.New()
+		md5Hash = hasherFactory.AcquireMD5()
+		defer md5Hash.Close()
 		hashers = append(hashers, md5Hash)
 	}
 
 	if v := r.HTTPRequest.Header.Get(contentSha256Header); len(v) == 0 {
-		sha256Hash = sha256.New()
+		sha256Hash = hasherFactory.AcquireSHA256()
+		defer sha256Hash.Close()
 		hashers = append(hashers, sha256Hash)
 	}
 
